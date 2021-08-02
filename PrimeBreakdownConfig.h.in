@@ -1,0 +1,3 @@
+// the configured options and settings for prime-breakdown
+#define PrimeBreakdown_VERSION_MAJOR @PrimeBreakdown_VERSION_MAJOR@
+#define PrimeBreakdown_VERSION_MINOR @PrimeBreakdown_VERSION_MINOR@
