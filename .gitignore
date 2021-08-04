@@ -1,3 +1,5 @@
+
+# CMake
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
@@ -12,3 +14,9 @@ _deps
 
 # executable
 prime-breakdown
+
+# build
+build
+
+# Custom
+PrimeBreakdownConfig.h
