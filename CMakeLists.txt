@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(PrimeBreakdown VERSION 1.1)
+project(PrimeBreakdown VERSION 0.1)
 
 
 # specify the C++ standard
