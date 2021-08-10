@@ -7,6 +7,7 @@ struct order {
     double item_total;
 };
 
-std::map<std::string, double> compute_total(std::vector<order>* orders);
 
-void test_function();
+std::vector<order> csv_to_orders(const char* filename);
+
+std::map<std::string, double> compute_total(std::vector<order>* orders);
