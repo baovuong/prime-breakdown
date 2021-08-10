@@ -16,7 +16,7 @@ _deps
 prime-breakdown
 csv_info
 csv_stats
-csv-parser
+./csv-parser
 
 # build
 build
