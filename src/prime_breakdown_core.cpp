@@ -3,7 +3,7 @@
 #include <algorithm>
 #include <iostream>
 
-#include <csv.hpp>
+#include "../csv-parser/include/csv.hpp"
 
 using namespace csv;
 using namespace std;

@@ -3,8 +3,14 @@ project(PrimeBreakdown VERSION 0.1)
 
 if (UNIX)
   set (CMAKE_CXX_FLAGS "-g3 -Wall -O0")
-endif ()    
+endif ()   
 
+include(CTest)
+enable_testing()
+
+set(CPACK_PROJECT_NAME ${PROJECT_NAME})
+set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
+include(CPack) 
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)
