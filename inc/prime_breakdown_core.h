@@ -6,6 +6,8 @@ struct amazon_item {
     std::string id;
     std::string name;
     std::string shipping_name;
+    double subtotal_tax;
+    double subtotal;
     double total;
 };
 

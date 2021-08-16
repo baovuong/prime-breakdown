@@ -15,7 +15,7 @@ map<string, double> compute_total(vector<amazon_item>* items) {
         if (shipping_totals.find(item.shipping_name) == shipping_totals.end()) {
             shipping_totals.insert(pair<string, double>(item.shipping_name, 0.0));
         }
-        shipping_totals[item.shipping_name] += item.total;
+        shipping_totals[item.shipping_name] += item.subtotal + item.subtotal_tax;
     }    
     return shipping_totals;
 }
@@ -25,8 +25,10 @@ vector<amazon_item> csv_to_items(const char* filename) {
     CSVReader reader(filename);
     for (auto& row : reader) {
         amazon_item entry;
+        entry.id = row["Order ID"].get<>();
         entry.shipping_name = row["Shipping Address Name"].get<>();
-        entry.total = stod(row["Item Total"].get<>().substr(1));
+        entry.subtotal = stod(row["Item Subtotal"].get<>().substr(1));
+        entry.subtotal_tax = stod(row["Item Subtotal Tax"].get<>().substr(1));
         output.push_back(entry);
     }
     return output;

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <sstream>
 
+#include <cli.h>
 #include <prime_breakdown_core.h>
 
 using namespace std;
@@ -14,16 +15,18 @@ string dollar_format(double d) {
 }
 
 int main(int argc, char** argv) {
-    if (argc <= 1) {
-        return 1;
-    }
+    // if (argc <= 1) {
+    //     return 1;
+    // }
 
-    vector<amazon_item> items = csv_to_items(argv[1]);
-    map<string, double> result = compute_total(&items);
+    // vector<amazon_item> items = csv_to_items(argv[1]);
+    // map<string, double> result = compute_total(&items);
 
-    for (map<string, double>::iterator it = result.begin(); it != result.end(); it++) {
-        cout << it->first << ": " << dollar_format(it->second) << endl;
-    }
+    // for (map<string, double>::iterator it = result.begin(); it != result.end(); it++) {
+    //     cout << it->first << ": " << dollar_format(it->second) << endl;
+    // }
+
+    process_commandline_args(argc, argv);
 
     return 0;
 }

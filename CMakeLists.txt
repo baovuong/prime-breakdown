@@ -19,10 +19,11 @@ set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 add_subdirectory(csv-parser)
 include_directories(inc)
-include_directories (src)
+include_directories(src)
 set (PrimeBreakdown_SOURCES
     src/main.cpp
     src/prime_breakdown_core.cpp
+    src/cli.cpp
     )
 
 
