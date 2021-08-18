@@ -22,7 +22,7 @@ include_directories(inc)
 include_directories(src)
 set (PrimeBreakdown_SOURCES
     src/main.cpp
-    src/prime_breakdown_core.cpp
+    src/prime_breakdown_processor.cpp
     src/cli.cpp
     )
 
