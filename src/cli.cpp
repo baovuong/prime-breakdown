@@ -73,3 +73,13 @@ void CommandLineInterface::execute() {
         cout << it->first << ": " << dollar_format(it->second) << endl;
     }
 }
+
+// setters
+
+void CommandLineInterface::argc(int argc) {
+    this->_argc = argc;
+}
+
+void CommandLineInterface::argv(char** argv) {
+    this->_argv = argv;
+}
