@@ -2,7 +2,8 @@
 
 int main(int argc, char** argv) {
 
-    process_commandline_args(argc, argv);
+    CommandLineInterface cli(argc, argv);
+    cli.execute();
 
     return 0;
 }

@@ -18,12 +18,20 @@ string dollar_format(double d) {
     return stream.str();
 }
 
-
 void print_usage() {
     cout << "Usage: prime-breakdown -i items-file-path -r returns-file-path" << endl;
 }
 
-void process_commandline_args(int argc, char** argv) {
+CommandLineInterface::CommandLineInterface(int argc, char** argv) {
+    this->_argc = argc;
+    this->_argv = argv;
+}
+
+CommandLineInterface::~CommandLineInterface() {
+
+}
+
+void CommandLineInterface::execute() {
 
     struct option long_options[] = {
         {"items-file", required_argument, 0, 'i'},
@@ -38,7 +46,7 @@ void process_commandline_args(int argc, char** argv) {
 
     PrimeBreakdownProcessor processor;
     
-    while ((opt = getopt_long(argc, argv, "i:r:", long_options, &long_index)) != -1) {
+    while ((opt = getopt_long(this->_argc, this->_argv, "i:r:", long_options, &long_index)) != -1) {
         switch (opt) {
             case 'i': 
                 items_file = optarg;
